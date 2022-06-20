@@ -1,7 +1,7 @@
 package task1;
 
 import java.util.*;
-import java.util.stream.Stream;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -15,7 +15,7 @@ public class Main {
 - Вывести количество элементов в стриме +
 - Вывести среднее арифметическое всех чисел в стриме +
          */
-        List<Integer> randomNum = new ArrayList<Integer>();
+        List<Integer> randomNum = new ArrayList<>();
         randomNum.add(1);
         randomNum.add(2);
         randomNum.add(1);
@@ -29,12 +29,11 @@ public class Main {
         randomNum.add(5);
         randomNum.add(19);
         randomNum.add(7);
-        Stream stream = randomNum.stream();
         randomNum.stream().distinct().forEach(System.out::println);
         randomNum.stream().filter(i -> i >= 7 && i <= 17 && i % 2 == 0).forEach(System.out::println);
         randomNum.stream().map(i -> i * 2).forEach(System.out::println);
         randomNum.stream().sorted().limit(4).forEach(System.out::println);
-        System.out.println(randomNum.stream().count());
+        System.out.println((long) randomNum.size());
         System.out.println(randomNum.stream().mapToInt(i -> i).average());
     }
 }
