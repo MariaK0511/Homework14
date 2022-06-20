@@ -29,6 +29,7 @@ public class Main {
         randomNum.add(5);
         randomNum.add(19);
         randomNum.add(7);
+
         randomNum.stream().distinct().forEach(System.out::println);
         randomNum.stream().filter(i -> i >= 7 && i <= 17 && i % 2 == 0).forEach(System.out::println);
         randomNum.stream().map(i -> i * 2).forEach(System.out::println);
