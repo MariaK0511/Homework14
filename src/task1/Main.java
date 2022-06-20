@@ -24,7 +24,7 @@ public class Main {
         randomNum.stream().filter(i -> i >= 7 && i <= 17 && i % 2 == 0).forEach(System.out::println);
         randomNum.stream().map(i -> i * 2).forEach(System.out::println);
         randomNum.stream().sorted().limit(4).forEach(System.out::println);
-        System.out.println((long) randomNum.size());
+        System.out.println(randomNum.stream().count());
         System.out.println(randomNum.stream().mapToInt(i -> i).average());
     }
 }
