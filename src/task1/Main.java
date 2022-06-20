@@ -15,27 +15,27 @@ public class Main {
 - Вывести количество элементов в стриме +
 - Вывести среднее арифметическое всех чисел в стриме +
          */
-        List<Integer> list = new ArrayList<Integer>();
-        list.add(1);
-        list.add(2);
-        list.add(1);
-        list.add(22);
-        list.add(35);
-        list.add(3);
-        list.add(12);
-        list.add(4);
-        list.add(53);
-        list.add(13);
-        list.add(5);
-        list.add(19);
-        list.add(7);
-        Stream stream = list.stream();
-        list.stream().distinct().forEach(System.out::println);
-        list.stream().filter(i -> i >= 7 && i <= 17 && i % 2 == 0).forEach(System.out::println);
-        list.stream().map(i -> i * 2).forEach(System.out::println);
-        list.stream().sorted().limit(4).forEach(System.out::println);
-        System.out.println(list.stream().count());
-        System.out.println(list.stream().mapToInt(i -> i).average());
+        List<Integer> randomNum = new ArrayList<Integer>();
+        randomNum.add(1);
+        randomNum.add(2);
+        randomNum.add(1);
+        randomNum.add(22);
+        randomNum.add(35);
+        randomNum.add(3);
+        randomNum.add(12);
+        randomNum.add(4);
+        randomNum.add(53);
+        randomNum.add(13);
+        randomNum.add(5);
+        randomNum.add(19);
+        randomNum.add(7);
+        Stream stream = randomNum.stream();
+        randomNum.stream().distinct().forEach(System.out::println);
+        randomNum.stream().filter(i -> i >= 7 && i <= 17 && i % 2 == 0).forEach(System.out::println);
+        randomNum.stream().map(i -> i * 2).forEach(System.out::println);
+        randomNum.stream().sorted().limit(4).forEach(System.out::println);
+        System.out.println(randomNum.stream().count());
+        System.out.println(randomNum.stream().mapToInt(i -> i).average());
     }
 }
 
