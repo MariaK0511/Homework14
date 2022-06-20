@@ -16,20 +16,10 @@ public class Main {
 - Вывести среднее арифметическое всех чисел в стриме +
          */
         List<Integer> randomNum = new ArrayList<>();
-        randomNum.add(1);
-        randomNum.add(2);
-        randomNum.add(1);
-        randomNum.add(22);
-        randomNum.add(35);
-        randomNum.add(3);
-        randomNum.add(12);
-        randomNum.add(4);
-        randomNum.add(53);
-        randomNum.add(13);
-        randomNum.add(5);
-        randomNum.add(19);
-        randomNum.add(7);
-
+        Random random = new Random();
+        for (int i = 0; i < 20; i++) {
+            randomNum.add(random.nextInt(20));
+        }
         randomNum.stream().distinct().forEach(System.out::println);
         randomNum.stream().filter(i -> i >= 7 && i <= 17 && i % 2 == 0).forEach(System.out::println);
         randomNum.stream().map(i -> i * 2).forEach(System.out::println);
