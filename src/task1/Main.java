@@ -25,7 +25,7 @@ public class Main {
         randomNum.stream().map(i -> i * 2).forEach(System.out::println);
         randomNum.stream().sorted().limit(4).forEach(System.out::println);
         System.out.println(randomNum.stream().count());
-        System.out.println(randomNum.stream().mapToInt(i -> i).average());
+        System.out.println(randomNum.stream().mapToDouble(i -> i).average());
     }
 }
 
